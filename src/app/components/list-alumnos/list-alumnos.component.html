@@ -1,0 +1,16 @@
+<div class="card mb-2" *ngFor="let alumno of alumnoService.list">
+    <div class="card-header">
+        <div class="form-group">
+            <label>{{alumno.nombre}}: {{alumno.estado}}</label>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-danger" (click)="actualizarAlumno(alumno.id, 'No Aprobado', alumno)">No Aprobado</button>
+            <button type="button" class="btn btn-success" (click)="actualizarAlumno(alumno.id, 'Aprobado', alumno)">Aprobado</button>
+            <button type="button" class="btn btn-primary" (click)="actualizarAlumno(alumno.id, 'Promocionado', alumno)">Promocionado</button>
+        </div>
+    </div>
+
+</div>

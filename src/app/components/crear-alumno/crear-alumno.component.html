@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header">
+        Form Alumnos
+    </div>
+
+    <div class="card-body">
+        <div class="form-group">
+            <label>Alumno</label>
+            <input type="text" class="form-control" [(ngModel)]="nombre">
+        </div>
+
+        <div class="form-group">
+            <label>Estado</label>
+            <select class="form-control" [(ngModel)]="estado">
+                <option>Aprobado</option>
+                <option>No Aprobado</option>
+                <option>Promocionado</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary float-right" (click)="agregarAlumno()"
+        [disabled]="nombre == ''">Aceptar</button>
+    </div>
+</div>
